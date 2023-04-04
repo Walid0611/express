@@ -10,7 +10,7 @@ app.get('/home',(req,res)=>{
     res.sendFile(__dirname + '/Public/home.html')
 })
 
-app.get('/outOfService',(req,res)=>{
+app.get('/outOfService',date , (req,res)=>{
     res.sendFile(__dirname + '/Public/outOfService.html')
 })
 
@@ -26,7 +26,7 @@ app.get('/', (req,res)=>{
     res.send("welcome ")
 })
 
- app.get('/middleware',AddDate,(req,res,next)=>{
+ app.get('/middleware',Date,(req,res,next)=>{
  res.send("the date: " +req.date);
  })
  app.get('/NOmiddleware',(req,res,next)=>{
